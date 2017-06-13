@@ -4,6 +4,7 @@ zhangj83, 13.06.2017
 
 # Introduction to IPython
 [Link to the lecture page](http://www.scipy-lectures.org/intro/intro.html)
+[Notes](./1.1/README.md)
 
 * Get help by using the ? operator after an object, __e.g.__ print?
 * Run a script file using the magic function %run script.py
