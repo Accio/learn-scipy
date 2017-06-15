@@ -47,3 +47,7 @@ if 2**2 == 4:
 	print('That is obvious!')
 
 ```
+
+```{python condition}
+%run condition.py
+```
