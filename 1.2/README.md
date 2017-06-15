@@ -36,4 +36,14 @@ It works in two steps.
 * A simple object can have several names bound to it
   * obj1 is obj2 tests whether the two variables point to the same object
 * Use index or slice to change in place
-  * __id__ returns the identity of an object
+  * __id__ returns the identity of an object.
+
+# 1.2.3 Control Flow
+
+## if/elif/else
+
+```{python if}
+if 2**2 == 4:
+	print('That is obvious!')
+
+```
