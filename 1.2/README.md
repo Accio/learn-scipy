@@ -46,8 +46,16 @@ It works in two steps.
 if 2**2 == 4:
 	print('That is obvious!')
 
-```
 
 ```{python condition}
 %run condition.py
+```
+
+## for and range
+
+```{python for}
+for day in range(4):
+	for term in ('great', 'interesting', 'not that slow'):
+		print("day {}: python is {}".format(day, term))
+
 ```
