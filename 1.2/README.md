@@ -59,3 +59,17 @@ for day in range(4):
 		print("day {}: python is {}".format(day, term))
 
 ```
+
+The following code calculates the GC content in a sequence using for loop and __in__ 
+
+```{python gc}
+gc = 0
+total = 0
+seq = 'ATGCGGGTCTTGAGGGATTTTAGTGTTGT'
+for n in seq:
+	if (n in ('G','C')):
+		gc += 1;
+	total += 1
+
+print("GC content = {gc:1.2f} ({gcCount}/{totalCount})".format(gc=gc/float(total), gcCount=gc, totalCount=total))
+```
