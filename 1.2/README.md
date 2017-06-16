@@ -107,3 +107,44 @@ for key, val in sorted(bundesliga.items()):
 ```
 
 Note in the example above how to use __sorted__ to sort keys in a dictionary
+
+List comprehension: like __sappy__ in R
+
+```{python listComprehension}
+[i**2 for i in range(4)]
+```
+
+Three ways to generate WallisPi
+
+```{python WallisPi}
+pi = 1
+for i in range(1,1000000):
+	fi2 = 4*(i**2)
+	pi *= fi2/(fi2-1)
+pi = pi*2
+print('pi = {:1.9f}'.format(pi))
+```
+
+```{python WallisPi2}
+wall = [i**2*4/(i**2*4-1) for i in range(1,100000)]
+pi = 1.0
+for p in wall:
+	pi = pi * p
+pi = pi*2
+print('pi = {:1.9f}'.format(pi))
+```
+
+Finally, we set a epislon value and make sure that the pi value compared to the last iterator differ less than that threshold.
+
+```{python WallisPi3}
+pi = 1.0 * 4/(4-1)
+i = 2
+oldpi = 1.0
+while pi-oldpi>1E-12:
+	oldpi = pi
+	pi = pi * 4*i**2/(4*i**2-1)
+	i = i+1;
+pi = pi*2
+print("After {:d} iterators, pi = {:1.9f}".format(i, pi))
+	
+```
