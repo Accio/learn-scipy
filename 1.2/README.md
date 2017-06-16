@@ -73,3 +73,37 @@ for n in seq:
 
 print("GC content = {gc:1.2f} ({gcCount}/{totalCount})".format(gc=gc/float(total), gcCount=gc, totalCount=total))
 ```
+
+Iterate over any sequence
+
+```{python vowel}
+vowels = 'aeiou'
+for i in 'powerful':
+	if i in vowels:
+		print(i)
+```
+
+```{python split}
+message = "Life is beautiful"
+message.split()
+for word in message.split():
+	print(word)
+```
+
+Use __enumerate__ to iterate over a sequence while keeping track of the item number
+
+```{python enumerate}
+words = ('cool', 'powerful', 'readable')
+for index,item in enumerate(words):
+	print((index, item))	
+```
+Use __items__ to loop over a dictionary
+
+```{python items}
+bundesliga = {'FCB':18, 'BVB':15, 'HSV':13, 'VFB':6}
+
+for key, val in sorted(bundesliga.items()):
+	print("%s has score: %d" % (key, val))
+```
+
+Note in the example above how to use __sorted__ to sort keys in a dictionary
