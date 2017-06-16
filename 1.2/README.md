@@ -146,5 +146,19 @@ while pi-oldpi>1E-12:
 	i = i+1;
 pi = pi*2
 print("After {:d} iterators, pi = {:1.9f}".format(i, pi))
-	
+```
+# 1.2.4 Functions
+
+Use __def__ to define a function
+
+```{python func}
+def gc_content(seq):
+	gc=0;
+	for n in seq.lower():
+		if n in ('g','c'):
+			gc = gc + 1
+	return(gc/len(seq))	
+
+gc_content('ATGC')
+gc_content('ATTGGCTGTTGAGCT')
 ```
