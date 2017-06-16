@@ -162,3 +162,29 @@ def gc_content(seq):
 gc_content('ATGC')
 gc_content('ATTGGCTGTTGAGCT')
 ```
+If the value passed in a function is immutable, the function cannot modify the caller's variable. If the value is mutable, the function may modify the caller's variable in place.
+
+```{python mutfunc}
+def try_to_modify(x,y,z):
+	"""A simply function to show the difference between mutable and immutable variables
+
+	Extended summary which can contain multi-line comments
+	"""
+	x = 23
+	y.append(42)
+	z = [99]
+	print(x)
+	print(y)
+	print(z)
+
+a = 77 # immutable
+b = [88] # mutable
+c = (28)
+try_to_modify(a,b,c)
+
+print(a)
+print(b)
+print(c)
+```
+
+The docstring allows user to call __try_to_modify?__ to learn how to use the function.
