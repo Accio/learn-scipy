@@ -200,3 +200,23 @@ def fib(n):
 for i in range(20):
 	print("fib({})={}".format(i, fib(i)))
 ```
+
+The function below implements the Quicksort algorithm. Notice how the lists are concatenated by __+__. One could also use list.extend() and list.append() but this way below is much simpler.
+
+```{python quicksort}
+def quicksort(array):
+	less = []
+	greater = []
+	if(len(array)<2):
+		return array
+	pivot=array[0]
+	for v in array[1:]:
+		if(v < pivot+1):
+			less.append(v)
+		else:
+			greater.append(v)
+	res = quicksort(less)+[pivot]+quicksort(greater)
+	return res
+
+quicksort((7,8,3,0,-1,2,4))
+```
