@@ -188,3 +188,15 @@ print(c)
 ```
 
 The docstring allows user to call __try_to_modify?__ to learn how to use the function.
+
+```{python fib}
+def fib(n):
+	if(n==0):
+		return(1)
+	if(n==1):
+		return(1)
+	return fib(n-1)+fib(n-2)
+
+for i in range(20):
+	print("fib({})={}".format(i, fib(i)))
+```
