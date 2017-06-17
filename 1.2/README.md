@@ -229,3 +229,8 @@ A script can be executed interactively inside the Ipython interpreter. The varia
 
 message
 ```
+__sys.argv__ can be used to retrieve command-line arguments
+
+```{bash arg}
+python argv.py these are arguments
+```
