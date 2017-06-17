@@ -234,3 +234,19 @@ __sys.argv__ can be used to retrieve command-line arguments
 ```{bash arg}
 python argv.py these are arguments
 ```
+
+Import module ___os___ and list files in the directory with __os.listdir__
+```{python import}
+ìmport os
+os.listdir('.')
+
+## alternative
+from os import listdir
+listdir('.')
+```
+
+Import a module with alias with __import MODULE as ALIAS__
+```{python np}
+import numpy as np
+np.linspace(0, 10, 12)
+```
