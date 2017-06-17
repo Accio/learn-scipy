@@ -380,6 +380,30 @@ with open('test.pkl', 'wb') as f:
 
 with open('test.pkl', 'rb') as f:
 	print(pickle.load(f))
+```
 
+# 1.2.8 Try and except
 
+# 1.2.9 OOP
+
+```{python oop}
+class Student(object):
+	def __init__(self,name):
+		self.name = name
+	def set_age(self, age):
+		self.age = age
+	def set_major(self, major):
+		self.major = major
+
+david = Student('David')
+david.set_age(27)
+david.set_major('medicine')
+
+class PhDStudent(Student):
+	internship = 'mandatory'
+
+juliane = PhDStudent('Juliane')
+juliane.internship
+juliane.set_age(29)
+juliane.age
 ```
