@@ -287,4 +287,16 @@ With a simple trick of __name__, one can use a module both by importing and by e
 
 ```{python rungcmod}
 %run gcmod
-´``
+```
+
+List of directories searched by python can be obtained by __sys.path__, which can be specified by the environment variable __PYTHONPATH__
+```{python syspath}
+import sys
+
+sys.path
+```
+
+# 1.2.5.6 Packages
+
+A directory that contains many modules is called a __package__.
+
