@@ -321,3 +321,65 @@ with open('test-outfile', 'r') as f2:
 ```
 
 Use 'r+' to do read and write.
+
+# 1.2.7 Standard Library
+
+```{python stdlib}
+## get current directory
+import os
+
+os.getcwd()
+
+os.listdir(os.curdir)
+
+os.mkdir("junkdir")
+
+"junkdir" in os.listdir(os.curdir)
+
+os.rename('junkdir', 'foodir')
+
+os.rmdir('foodir')
+
+## path relevant functions
+import os.path
+
+## Run external command
+os.system("ls")
+
+## use the sh lib
+import sh
+com = sh.ls()
+
+print(com)
+print(com.exit_code)
+type(com)
+
+## walk a tree
+for dirpath, dirnames, filenames in os.walk(os.curdir):
+	for fp in filenames:
+		print(os.path.abspath(fp))
+
+## use the glob module for file pattern matching 
+import glob
+
+glob.glob("*.py")
+
+## sys: system specific information
+import sys
+
+sys.platform
+sys.version
+sys.prefix
+
+## pickle: easy persistence
+import pickle
+
+mylist = [3.14, True, None, 'David']
+with open('test.pkl', 'wb') as f:
+	pickle.dump(mylist, f)
+
+with open('test.pkl', 'rb') as f:
+	print(pickle.load(f))
+
+
+```
