@@ -220,3 +220,12 @@ def quicksort(array):
 
 quicksort((7,8,3,0,-1,2,4))
 ```
+# 1.2.5 Scripting
+
+A script can be executed interactively inside the Ipython interpreter. The variables will become visible.
+
+```{python message}
+%run message.py
+
+message
+```
