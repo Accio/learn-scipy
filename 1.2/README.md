@@ -250,3 +250,6 @@ Import a module with alias with __import MODULE as ALIAS__
 import numpy as np
 np.linspace(0, 10, 12)
 ```
+
+## 1.2.5.3 Creating modules
+
