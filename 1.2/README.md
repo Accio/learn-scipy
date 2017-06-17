@@ -253,3 +253,38 @@ np.linspace(0, 10, 12)
 
 ## 1.2.5.3 Creating modules
 
+```{python gcmod}
+import gcmod
+
+myseq = 'AATTCGGCTTAGTG'
+
+gcmod.gc_count(myseq)
+
+gcmod.gc_perc(myseq)
+```
+
+Several techniques for introspection
+
+```{python introspection}
+gcmod?
+
+who ## show variables in the environment (like ls() in R)
+whos ## with details
+
+dir(gcmod) ## list members of a module
+
+## import objects from modules into the main namespace
+from gcmod import gc_count, gc_perc
+
+whos
+
+## to reload a module in python3, use
+from importlib import reload
+reload(gcmod)
+```
+
+With a simple trick of __name__, one can use a module both by importing and by executing
+
+```{python rungcmod}
+%run gcmod
+´``
