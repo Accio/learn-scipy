@@ -296,7 +296,28 @@ import sys
 sys.path
 ```
 
-# 1.2.5.6 Packages
+## 1.2.5.6 Packages
 
 A directory that contains many modules is called a __package__.
 
+Usse PACKAGE.__file__ to find where the init file is.
+
+# 1.2.6 Input and output
+
+```{python stringio}
+f = open('test-outfile', 'w')
+type(f)
+
+f.write("Hello world\na new line")
+f.close()
+
+with open('test-outfile', 'a') as f:
+	f.write("\nYet another line")
+
+## notice that f2 is automatically closed
+with open('test-outfile', 'r') as f2:
+	s = f2.read()
+	print(s)
+```
+
+Use 'r+' to do read and write.
