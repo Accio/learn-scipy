@@ -384,6 +384,7 @@ with open('test.pkl', 'rb') as f:
 
 # 1.2.8 Try and except
 
+try: ... except Error:...
 ```{python exeception}
 while True:
     try:
@@ -393,6 +394,14 @@ while True:
         print('That was not a number')
 ```
 
+```{python finally}
+try:
+    x = int(input('Give me a number:'))
+except ValueError:
+    print('That was not a number')
+finally:
+    print('Thanks for the input')
+```
 # 1.2.9 OOP
 
 ```{python oop}
