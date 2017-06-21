@@ -442,6 +442,26 @@ filter_name('Gaël')
 filter_name('Stéfan')
 ```
 
+The last part describes using exception as a medium of communication. __StopIteartion__ is a defined exception which can be used to tell other part of the program to stop iteration. 
+
+```{python exceptComm}
+def achilles_arrow(x):
+    if abs(x-1) < 1e-6:
+      raise StopIteration
+    x = 1 - (1-x)/2
+    return x
+
+x = 0
+
+while True:
+    try:
+        x = achilles_arrow(x)
+    except StopIteration:
+        break
+
+x
+```
+
 # 1.2.9 OOP
 
 ```{python oop}
