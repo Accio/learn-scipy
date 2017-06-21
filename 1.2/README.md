@@ -427,6 +427,21 @@ print_sorted(set((1,3,2)))
 print_sorted('132')
 ```
 
+```{python raise}
+def filter_name(name):
+    try:
+        name = name.encode('ascii')
+    except UnicodeError as e:
+        if name == 'Gaël':
+          print('Okay, Gaël')
+        else:
+          raise e
+    return name
+
+filter_name('Gaël')
+filter_name('Stéfan')
+```
+
 # 1.2.9 OOP
 
 ```{python oop}
