@@ -402,6 +402,31 @@ except ValueError:
 finally:
     print('Thanks for the input')
 ```
+
+The following section has in the lecture note the title ___Easier to ask for forgiveness than for permisson___. My understanding is that by passing exceptions (in this case __AttributeError__, namely an object has no specified attribute (method)), a function can handle classes with distinct properties without breaking the code. 
+
+```{python sortedForAll}
+a = [1,3,2]
+b = set((1,3,2))
+c = '132'
+
+a.sort()
+print(a)
+b.sort() ## this won't work because set does not support .sort()
+c.sort() ## this won't work neither
+
+def print_sorted(collection):
+    try:
+        collection.sort()
+    except AttributeError:
+         pass
+    print(collection)
+
+print_sorted([1,3,2])
+print_sorted(set((1,3,2)))
+print_sorted('132')
+```
+
 # 1.2.9 OOP
 
 ```{python oop}
