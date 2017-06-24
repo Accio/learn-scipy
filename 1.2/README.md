@@ -384,6 +384,84 @@ with open('test.pkl', 'rb') as f:
 
 # 1.2.8 Try and except
 
+try: ... except Error:...
+```{python exeception}
+while True:
+    try:
+        x = int(input('Give me a number:'))
+        break
+    except ValueError:
+        print('That was not a number')
+```
+
+```{python finally}
+try:
+    x = int(input('Give me a number:'))
+except ValueError:
+    print('That was not a number')
+finally:
+    print('Thanks for the input')
+```
+
+The following section has in the lecture note the title ___Easier to ask for forgiveness than for permisson___. My understanding is that by passing exceptions (in this case __AttributeError__, namely an object has no specified attribute (method)), a function can handle classes with distinct properties without breaking the code. 
+
+```{python sortedForAll}
+a = [1,3,2]
+b = set((1,3,2))
+c = '132'
+
+a.sort()
+print(a)
+b.sort() ## this won't work because set does not support .sort()
+c.sort() ## this won't work neither
+
+def print_sorted(collection):
+    try:
+        collection.sort()
+    except AttributeError:
+         pass
+    print(collection)
+
+print_sorted([1,3,2])
+print_sorted(set((1,3,2)))
+print_sorted('132')
+```
+
+```{python raise}
+def filter_name(name):
+    try:
+        name = name.encode('ascii')
+    except UnicodeError as e:
+        if name == 'Gaël':
+          print('Okay, Gaël')
+        else:
+          raise e
+    return name
+
+filter_name('Gaël')
+filter_name('Stéfan')
+```
+
+The last part describes using exception as a medium of communication. __StopIteartion__ is a defined exception which can be used to tell other part of the program to stop iteration. 
+
+```{python exceptComm}
+def achilles_arrow(x):
+    if abs(x-1) < 1e-6:
+      raise StopIteration
+    x = 1 - (1-x)/2
+    return x
+
+x = 0
+
+while True:
+    try:
+        x = achilles_arrow(x)
+    except StopIteration:
+        break
+
+x
+```
+
 # 1.2.9 OOP
 
 ```{python oop}
