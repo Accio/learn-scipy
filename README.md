@@ -10,3 +10,5 @@ Chapters
 2. [Learning Notes of Python](1.2/README.md)
 3. Numpy
   1. [The NumPy array object](1.3/array_object.ipynb)
+  2. [Array operations](1.3/Operations.ipynb)
+  3. [Array exercises](1.3/NumPy Exercises.ipynb)
